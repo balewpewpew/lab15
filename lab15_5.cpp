@@ -18,5 +18,25 @@ int main(){
 	return 0;
 }
 
-//Do not modify the code above this line
-//Write definition of shuffle() using pointer after this line. 
+void shuffle(int *a,int *b,int *c,int *d){
+	int x = rand()%4+1;
+	int y;
+	switch(x){
+		case 1: 
+		y = *a; 
+		*a = *b; 
+		*b = y;
+		case 2:
+		y = *b;
+		*b = *c;
+		*c = y;
+		case 3:
+		y = *c;
+		*c = *d;
+		*d = y;
+		case 4:
+		y = *d;
+		*d = *a;
+		*a = y;
+	}
+} 
